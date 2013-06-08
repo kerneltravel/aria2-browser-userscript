@@ -94,7 +94,7 @@ var TLE = TLE || {};
 				dataType: "json",
 				success:function(data){
 					if(data&&data.ret==0){
-						$.cookie('FTN5K',data.data.com_cookie,{path:"/",domain:"qq.com"});
+						$.cookie('wjysessid',data.data.com_cookie,{path:"/",domain:"kuai.xunlei.com"});
 						//window.location=data.data.com_url;
 						//显示Aria2c下载命令
 						//alert( "aria2c -c -s10 -x10 --out "+filename+" --header 'Cookie: FTN5K="+data.data.com_cookie+";' '"+data.data.com_url+"'\n");				
@@ -103,7 +103,7 @@ var TLE = TLE || {};
 							$.getScript("https://raw.github.com/gist/3116833/aria2jsonrpc.js", function() {
 								jsonrpc_path = $("#QQ_aria2_jsonrpc").val();
 								var aria2 = new ARIA2(jsonrpc_path);
-								aria2.addUri(data.data.com_url, {out: filename, header: 'Cookie: FTN5K='+data.data.com_cookie});
+								aria2.addUri(data.data.com_url, {out: filename, header: 'Cookie: wjysessid='+data.data.com_cookie});
 							});
 						} else {
 							alert("尚未设置Aria2 JSONRPC地址");
