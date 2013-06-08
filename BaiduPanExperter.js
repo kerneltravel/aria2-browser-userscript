@@ -94,7 +94,7 @@ var TLE = TLE || {};
 				dataType: "json",
 				success:function(data){
 					if(data&&data.ret==0){
-						$.cookie('BDUT',data.data.com_cookie,{path:"/",domain:"kuai.xunlei.com"});
+						$.cookie('BDUT',data.data.com_cookie,{path:"/",domain:"baidu.com"});
 						//window.location=data.data.com_url;
 						//显示Aria2c下载命令
 						//alert( "aria2c -c -s10 -x10 --out "+filename+" --header 'Cookie: FTN5K="+data.data.com_cookie+";' '"+data.data.com_url+"'\n");				
