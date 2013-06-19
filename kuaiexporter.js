@@ -25,6 +25,7 @@ function getUrls() {
 	var urls = "";
 	var files = document.getElementsByClassName("file_name");
 	for(k in files)	{
+		var url = "";
 		if (files[k].href != null) {
 			var qs = files[k].href;
 			
@@ -33,32 +34,25 @@ function getUrls() {
 			var item = null, name = null, value = null, header = null;
 			
 			for(var i=0; i < items.length; i++){
-				//urls += items[i] + "\n\n";
-
 				item = items[i].split("=");
 				name = item[0];
 				value = item[1];
-				
-				
+
 				if(name == "mu") continue;
 				if(name == "d") {
 					header = value;
-					urls += "&f=lixian.vip.xunlei.com";
+					url += "&f=lixian.vip.xunlei.com";
 					continue;
 				}
-				
-				if( i > 0 )
-					urls += "&" + name + "=" + value;
-				else
-					urls += name + "=" + value;
-				
+				url += "&" + name + "=" + value;			
 			}
-			
+
 			var temp1 = "http://" + header + ".sendfile.vip.xunlei.com";
-			var start = urls.indexOf(":8000");
-			var temp2 = urls.substr(start);
-			urls = temp1 + temp2;
+			var start = url.indexOf(":8000");
+			var temp2 = url.substr(start);
+			url = temp1 + temp2;
 		}
+		urls += url + "\n\n";
     }
     return urls;
 }
