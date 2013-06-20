@@ -6,6 +6,10 @@
 // @include     http://kuai.xunlei.com/d/*
 // ==/UserScript==
 
+var TLE = TLE || {};
+
+(function(TLE) {
+
 function getcookie(c_name) {
 	if (document.cookie.length > 0) {
 		c_start=document.cookie.indexOf(c_name + "=");
@@ -112,15 +116,21 @@ function yaawdownload() {
     }
 }
 
-// 修改广告为按钮
-var btn = document.getElementsByClassName("adb_txt")[0];
-btn.innerHTML = "->推送到YAAW下载<-";
-btn.addEventListener("click", yaawdownload, false);
+function init() {
+	// 修改广告为按钮
+	var btn = document.getElementsByClassName("adb_txt")[0];
+	btn.innerHTML = "->推送到YAAW下载<-";
+	btn.addEventListener("click", yaawdownload, false);
 
-// 创建文本框，显示URL
-var textarea = document.createElement("textarea");
-textarea.innerHTML = getUrls();
-textarea.style.width = "354px";
-textarea.style.height = "150px";
-textarea.style.display = "block";
-document.getElementsByClassName("download_w_new")[0].appendChild(textarea);
+	// 创建文本框，显示URL
+	var textarea = document.createElement("textarea");
+	textarea.innerHTML = getUrls();
+	textarea.style.width = "354px";
+	textarea.style.height = "150px";
+	textarea.style.display = "block";
+	document.getElementsByClassName("download_w_new")[0].appendChild(textarea);
+}
+
+init();
+
+})(TLE);
