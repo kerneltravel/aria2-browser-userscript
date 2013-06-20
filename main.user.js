@@ -7,6 +7,7 @@
 // @include     http://61.147.76.6/iplay.html?*
 // @include     http://222.141.53.5/iplay.html?*
 // @include     http://fenxiang.qq.com/x/*
+// @include     http://kuai.xunlei.com/d/*
 // @version     0.2
 // @Author  	Honooon
 // @Email 		honooon@gmail.com
@@ -17,7 +18,7 @@
 
 var script = document.createElement('script');
 script.id = "Honooon_script";
-if (location.host == "http://kuai.xunlei.com/") {
+if (location.host == "kuai.xunlei.com") {
 	script.src = "https://raw.github.com/muimi/aria2-browser-userscript/master/kuaiexporter.js";
 } else if (location.host == "fenxiang.qq.com") {
 	script.src = "https://raw.github.com/chztv/QQFXExporter/master/QQFXExporter.js";
