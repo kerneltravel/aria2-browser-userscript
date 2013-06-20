@@ -18,7 +18,7 @@
 var script = document.createElement('script');
 script.id = "Honooon_script";
 if (location.host == "http://kuai.xunlei.com/") {
-	script.src = "https://raw.github.com/muimi/aria2-browser-userscript/master/ThunderKCExporter.js";
+	script.src = "https://raw.github.com/muimi/aria2-browser-userscript/master/kuaiexporter.js";
 } else if (location.host == "fenxiang.qq.com") {
 	script.src = "https://raw.github.com/chztv/QQFXExporter/master/QQFXExporter.js";
 } else if (location.host == "lixian.qq.com") {
