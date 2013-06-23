@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>XUNLEI &mdash; Download</title>
+  <link href="qqdownload.css" media="screen" rel="stylesheet" />
+</head>
+
+<body>
+  <section id="main" class="signin" role="main">
+    <div class="qqlogo"></div>
+    <form id="frm_submit" action="" method="post">
+      <div class="inputs">
+        <input type="text" name="xl_filename" id="xl_filename" placeholder="XUNLEI Filename">
+        <input type="text" name="xl_url" id="xl_url" placeholder="XUNLEI URL">
+      </div>
+      <a href="JavaScript:handleSubmit()" class="btn submit">Push to YAAW</a>
+    </form>
+  </section>
+</body>
+
+<script src="http://fenxiang.qq.com/upload/js/jquery-1.7.2.min.js" type="text/javascript" ></script>
+<script src="http://fenxiang.qq.com/upload/js/jquery.cookie.js" type="text/javascript" ></script>
+
+<script type="text/javascript">
+
+  function getcookie(c_name) {
+    if (document.cookie.length > 0) {
+      c_start=document.cookie.indexOf(c_name + "=");
+      if (c_start != -1) {
+        c_start=c_start + c_name.length + 1;
+        c_end=document.cookie.indexOf(";", c_start);
+        if (c_end == -1) c_end = document.cookie.length;
+        return document.cookie.substring(c_start, c_end);
+      }
+    }
+    return "";
+  }
+
+  function addtoaria2(url, filename) {
+    var kuai_cookie = "";
+    var jsonrpc_path = "http://192.168.11.3:6800/jsonrpc";
+    alert("添加中...到YAAW界面查看是否添加成功");
+    $.getScript("https://raw.github.com/gist/3116833/aria2jsonrpc.js", function() {
+      var aria2 = new ARIA2(jsonrpc_path);
+      aria2.addUri(url, {out: filename, header: 'Cookie: gdriveid='+kuai_cookie});
+    });
+  }
+
+  function handleSubmit(){
+    var filename = document.forms["frm_submit"].xl_filename.value;
+    var url = document.forms["frm_submit"].xl_url.value;
+
+    alert(filename);
+    alert(url);
+    var kuai_cookie = $.cookie('gdriveid',{path:"/",domain:"vip.xunlei.com"});
+    alert(kuai_cookie);
+    //addtoaria2(url, filename);
+
+  }
+</script>
+
+</html>
