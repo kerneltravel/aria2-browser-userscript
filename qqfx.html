@@ -55,15 +55,17 @@
   function handleSubmit(){
     var filename = document.forms["frm_submit"].filename.value;
     var filehash = document.forms["frm_submit"].filehash.value;
-    var query_url = API_URL.handler_url + "/getComUrl" + "?callback=?";
+    var query_url = API_URL.handler_url + "/getComUrl";
     alert(filename);
     alert(filehash);
 
     $.ajax({
+      type: "POST",
       url: query_url,
-      dataType: "jsonp",
+      cache: false,
       data:{"filename":filename,"filehash":filehash},
       timeout:3000,
+      dataType: "json",
       success:function(json){
         alert("OK");
         alert(json.data.com_url);
