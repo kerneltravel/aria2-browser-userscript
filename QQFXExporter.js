@@ -27,7 +27,9 @@ var TLE = TLE || {};
   function init() {
   	//$(".com_down").html('<dl><dt><a id="btn_normal" class="btn_normal" hidefocus="true" href="javascript:;"></a></dt><dd><a id="btn_normal2" class="btn_normal2" hidefocus="true" href="javascript:;">使用Aria2下载</a></dd></dl>');
   	$(".high_down").html('<dl><dt><a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a></dt><dd style="color:red"></dd></dl>');
-  	$(".btn_xf").html('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
+  	//$(".btn_xf").html('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
+  	$(".tvs_info").after('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
+
     //css
     $("head").append('<style>'
           +'.btn_aria2 {background:url("https://raw.github.com/chztv/QQFXExporter/master/images/aria2_btn.png") no-repeat left top; width:112px; height: 34px;display: block;float: left;}'
