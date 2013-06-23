@@ -2,7 +2,7 @@
 // Author: Paul Chan<paul@paulreina.com>
 //         http://www.chztv.com
 // Created on 12-12-4 AM1:19
-// Modified on 13-4-22 
+// Modified on 13-4-22
 
 
 
@@ -12,7 +12,7 @@
 
 
 //保存按钮
-$('.setting_button').live("click",function(){		    
+$('.setting_button').live("click",function(){
 	//获取选择的列表
 	TLE.setConfig("QQ_aria2_jsonrpc", $("#QQ_aria2_jsonrpc").val());
 	XF.widget.msgbox.show("设置成功!"+TLE.getConfig("QQ_aria2_jsonrpc"),2,2000);
@@ -27,7 +27,7 @@ var TLE = TLE || {};
   function init() {
   	//$(".com_down").html('<dl><dt><a id="btn_normal" class="btn_normal" hidefocus="true" href="javascript:;"></a></dt><dd><a id="btn_normal2" class="btn_normal2" hidefocus="true" href="javascript:;">使用Aria2下载</a></dd></dl>');
   	$(".high_down").html('<dl><dt><a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a></dt><dd style="color:red"></dd></dl>');
-  	$(".down_xf").html('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
+  	$(".btn_xf").html('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
     //css
     $("head").append('<style>'
           +'.btn_aria2 {background:url("https://raw.github.com/chztv/QQFXExporter/master/images/aria2_btn.png") no-repeat left top; width:112px; height: 34px;display: block;float: left;}'
@@ -74,7 +74,7 @@ var TLE = TLE || {};
     $("label.check_all_text").after('<span style="height:35px;line-height:35px;padding-left:10px;">Aria2 JSON-RPC Path:<input type="text" id="QQ_aria2_jsonrpc" style="width: 200px" value="'+jsonrpc_path+'"/>  <a href="javascript:;" hidefocus="true" class="setting_button" id="setting_button" title="保存设置" style="color:#666">保存</a></span>');
 
 	//普通下载按钮
-	$('.btn_aria2').live("click",function(){		    
+	$('.btn_aria2').live("click",function(){
 	//获取选择的列表
 	    var checked_list=$(".file_list_checkbox:checked");
 		if(checked_list.size()>0){
@@ -105,7 +105,7 @@ var TLE = TLE || {};
 				 $.cookie('FTN5K',data.data.com_cookie,{path:"/",domain:"qq.com"});
 				 //window.location=data.data.com_url;
 				 //显示Aria2c下载命令
-				 //alert( "aria2c -c -s10 -x10 --out "+filename+" --header 'Cookie: FTN5K="+data.data.com_cookie+";' '"+data.data.com_url+"'\n");				
+				 //alert( "aria2c -c -s10 -x10 --out "+filename+" --header 'Cookie: FTN5K="+data.data.com_cookie+";' '"+data.data.com_url+"'\n");
 					if (jsonrpc_path) {
 					  alert("添加中...到YAAW界面查看是否添加成功");
 					  $.getScript("https://raw.github.com/gist/3116833/aria2jsonrpc.js", function() {
@@ -123,8 +123,8 @@ var TLE = TLE || {};
 				  XF.widget.msgbox.show("获取普通下载链失败,请重试!",2,2000);
 				 }
 	});
-	}	
-		
+	}
+
     //close menu binding
     $(document.body).bind("click",function(){
       $("div.TLE_p_getbtn, #TLE_batch_getbtn, #TLE_bt_getbtn").hide();
