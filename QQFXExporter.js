@@ -24,11 +24,24 @@ var TLE = TLE || {};
 
 (function(TLE) {
 
+	function yaawdownload() {
+		alert(resource_info.filename);
+		alert(resource_info.filehash);
+
+		//addtoaria2(file_url, file_name);
+
+
+	}
+
   function init() {
   	//$(".com_down").html('<dl><dt><a id="btn_normal" class="btn_normal" hidefocus="true" href="javascript:;"></a></dt><dd><a id="btn_normal2" class="btn_normal2" hidefocus="true" href="javascript:;">使用Aria2下载</a></dd></dl>');
   	$(".high_down").html('<dl><dt><a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a></dt><dd style="color:red"></dd></dl>');
   	//$(".btn_xf").html('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
   	$(".tvs_info").after('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
+
+  	var btn = document.getElementsByClassName("tvs_totalsize_box")[0];
+	btn.innerHTML = "->推送到YAAW下载<-";
+	btn.addEventListener("click", yaawdownload, false);
 
     //css
     $("head").append('<style>'
