@@ -11,17 +11,7 @@
 
 
 
-//保存按钮
-$('.setting_button').live("click",function(){
-	var filename = "指环王.双塔奇兵.加长版.The.Lord.of.the.Rings.The.Two.Towers.Extended.Editions.2002.BD.MiniSD-TLF.mkv";
-	var filehash = "A6117C2972B4A8C9FB1B2442C645012AC9C818CB";
-	start_normal_down_paul(filename,filehash);
-	/*
-	//获取选择的列表
-	TLE.setConfig("QQ_aria2_jsonrpc", $("#QQ_aria2_jsonrpc").val());
-	XF.widget.msgbox.show("设置成功!"+TLE.getConfig("QQ_aria2_jsonrpc"),2,2000);
-	*/
-} );
+
 
 var TLE = TLE || {};
 
@@ -40,6 +30,18 @@ var TLE = TLE || {};
   	//$(".com_down").html('<dl><dt><a id="btn_normal" class="btn_normal" hidefocus="true" href="javascript:;"></a></dt><dd><a id="btn_normal2" class="btn_normal2" hidefocus="true" href="javascript:;">使用Aria2下载</a></dd></dl>');
   	$(".high_down").html('<dl><dt><a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a></dt><dd style="color:red"></dd></dl>');
   	//$(".btn_xf").html('<a id="btn_aria2" class="btn_aria2" hidefocus="true" href="javascript:;"></a>');
+
+  	//保存按钮
+$('.setting_button').live("click",function(){
+	var filename = "指环王.双塔奇兵.加长版.The.Lord.of.the.Rings.The.Two.Towers.Extended.Editions.2002.BD.MiniSD-TLF.mkv";
+	var filehash = "A6117C2972B4A8C9FB1B2442C645012AC9C818CB";
+	start_normal_down_paul(filename,filehash);
+	/*
+	//获取选择的列表
+	TLE.setConfig("QQ_aria2_jsonrpc", $("#QQ_aria2_jsonrpc").val());
+	XF.widget.msgbox.show("设置成功!"+TLE.getConfig("QQ_aria2_jsonrpc"),2,2000);
+	*/
+} );
 
 	var download_list=$(".tvs_single_download");
 	if(download_list.size()>0){
