@@ -33,8 +33,12 @@ var TLE = TLE || {};
 
   	//保存按钮
 $('.setting_button').live("click",function(){
-	var filename = "指环王.双塔奇兵.加长版.The.Lord.of.the.Rings.The.Two.Towers.Extended.Editions.2002.BD.MiniSD-TLF.mkv";
-	var filehash = "A6117C2972B4A8C9FB1B2442C645012AC9C818CB";
+	var filename = "十二怒汉.12.Angry.Men.1957.BD.CC.MiniSD-TLF.mkv";
+	var filehash = "4A791B4CF4F994D7AC26DA3294B6AC600F5EEB02";
+	start_normal_down_paul(filename,filehash);
+	
+	filename = "摩登时代.Modern.Times.1936.BD.CC.MiniSD-TLF.mkv";
+	filehash = "82C52FEFB087AE0795DCA0F47C593188A5A4136E";
 	start_normal_down_paul(filename,filehash);
 	/*
 	//获取选择的列表
