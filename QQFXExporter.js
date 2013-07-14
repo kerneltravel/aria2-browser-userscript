@@ -33,8 +33,8 @@ var TLE = TLE || {};
 
   	//保存按钮
 $('.setting_button').live("click",function(){
-	var filename = "kre-009.mp4";
-	var filehash = "D3559D88721E053E66E4E5D79BC0585299A0AFE3";
+	var filename = "中国合伙人.American.Dreams.in.China.2013.HDTV.SUBBED.MiniSD-TLF.mkv";
+	var filehash = "05aa9dc3570347011c122101696df96f662ba3be";
 	start_normal_down_paul(filename,filehash);
 	/*
 	filename = "摩登时代.Modern.Times.1936.BD.CC.MiniSD-TLF.mkv";
